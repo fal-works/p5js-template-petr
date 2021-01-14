@@ -10,6 +10,9 @@
     "target": "ES2015",
     "module": "ESNext",
 
+    // handling source modules
+    "isolatedModules": true,
+
     // checking syntax
     "strict": true,
     "noImplicitReturns": true,
