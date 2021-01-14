@@ -1,0 +1,52 @@
+{
+  "ignorePatterns": ["/tsc-out/"],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": [
+    // basic recommended rules
+    "eslint:recommended",
+
+    // turn off rules that might conflict with prettier
+    "prettier"
+  ],
+
+  "overrides": [
+    {
+      "files": ["src/**/*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        // overwrite config for p5.js
+        "@fal-works/p5js",
+
+        // recommended rules for TypeScript
+        "plugin:@typescript-eslint/recommended",
+
+        // overwrite config of @typescript-eslint for p5.js
+        "@fal-works/p5js/@typescript-eslint",
+
+        // turn off rules of @typescript-eslint that might conflict with prettier
+        "prettier/@typescript-eslint"
+      ],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    },
+    {
+      "files": ["dist/**/*.js"],
+      "extends": [
+        // overwrite config for p5.js
+        "@fal-works/p5js"
+      ],
+      "rules": {
+        "lines-around-comment": "error"
+      }
+    }
+  ]
+}
