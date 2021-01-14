@@ -47,6 +47,13 @@
       "rules": {
         "lines-around-comment": "error"
       }
+    },
+    {
+      "files": ["rollup.config.js"],
+      "env": {
+        "node": true,
+        "browser": false
+      }
     }
   ]
 }
