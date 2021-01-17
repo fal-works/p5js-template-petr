@@ -15,7 +15,7 @@
     "build": "npm run transpile && npm run bundle && npm run format:dist",
     "transpile": "tsc",
     "bundle": "rollup --config",
-    "preformat:dist": "eslint --no-ignore --fix dist/*.js",
+    "preformat:dist": "eslint --fix --no-ignore dist/*.js",
     "format:dist": "prettier --write dist/*.js"
   }
 }
