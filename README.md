@@ -84,4 +84,3 @@ If they seem to be not working, reload window of VS Code.
 - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)
 - [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
 - [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
-- [@fal-works/eslint-config-p5js](https://www.npmjs.com/package/@fal-works/eslint-config-p5js)

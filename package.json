@@ -1,7 +1,6 @@
 {
   "license": "CC0-1.0",
   "devDependencies": {
-    "@fal-works/eslint-config-p5js": "^1.0.1",
     "@types/p5": "^0.9.1",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",
@@ -13,10 +12,10 @@
   },
   "private": true,
   "scripts": {
-    "build": "npm run transpile && npm run bundle && npm run lint:dist && npm run format:dist",
+    "build": "npm run transpile && npm run bundle && npm run format:dist",
     "transpile": "tsc",
     "bundle": "rollup --config",
-    "lint:dist": "eslint --fix dist/*.js",
+    "preformat:dist": "eslint --no-ignore --fix dist/*.js",
     "format:dist": "prettier --write dist/*.js"
   }
 }
