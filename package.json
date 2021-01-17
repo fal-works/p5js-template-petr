@@ -12,9 +12,8 @@
   },
   "private": true,
   "scripts": {
-    "build": "npm run transpile && npm run bundle && npm run format:dist",
-    "transpile": "tsc",
-    "bundle": "rollup --config",
+    "build": "npm run bundle && npm run format:dist",
+    "bundle": "tsc & rollup --config",
     "preformat:dist": "eslint --fix --no-ignore dist/*.js",
     "format:dist": "prettier --write dist/*.js"
   }
